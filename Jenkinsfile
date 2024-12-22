@@ -17,6 +17,18 @@ pipeline {
                 sh 'node test-website.js'
             }
         }
+        stage('Build') {
+            steps {
+                echo 'Building the project...'
+                // Tambahkan proses build jika ada, seperti npm install atau compile CSS
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying to server...'
+                // Tambahkan langkah untuk memindahkan file ke server atau direktori hosting
+            }
+        }
     }
     post {
         success {
